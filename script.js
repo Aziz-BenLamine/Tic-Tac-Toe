@@ -55,6 +55,9 @@ function checkForWin(board, mark) {
 
     return false;
 }
+function checkForTie(board) {
+    return board.every(cell => cell !== "");
+}
 
 const createPlayer = (name, mark) => {
     return {
@@ -89,8 +92,13 @@ const Game = (() => {
             if (checkForWin(GameBoard.getGameboard(), players[currentPlayer].mark)) {
                 gameOver = true;
                 alert(`${players[currentPlayer].name} WON !`)
+            }else if(checkForTie(GameBoard.getGameboard())){
+                gameOver = true;
+                alert("It's a tie!");
+            }else {
+                currentPlayer = (currentPlayer === 0 ? 1 : 0);
             }
-            currentPlayer = (currentPlayer === 0 ? 1 : 0);
+
         }
     }
 
