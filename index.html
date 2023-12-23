@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    <h1>Tic-Tac-Toe</h1>
-    <div id="gameboard"></div>
-    <div id="controls">
-        <input type="text" id="player1" placeholder="Player 1 Name">
-        <input type="text" id="player2" placeholder="Player 2 Name">
-        <button id="start-button">Start Game</button>
-        <button id="restart-button">Restart Game</button>
+    <div class="flex-container">
+        <div class="header">
+            <h1><i class="fas fa-times"></i> Tic-Tac-Toe <i class="far fa-circle"></i></h1>
+        </div>
+        <div id="gameboard"></div>
+        <div id="controls">
+            <input type="text" id="player1" placeholder="Player 1 Name">
+            <input type="text" id="player2" placeholder="Player 2 Name">
+            <button id="start-button">Start Game</button>
+            <button id="restart-button">Restart Game</button>
+        </div>
+        <div id="result"></div>
     </div>
-    <div id="result"></div>
 </body>
+
 </html>
